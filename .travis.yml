@@ -1,0 +1,17 @@
+language: go
+go:
+- 1.7
+- 1.8
+- tip
+
+addons:
+  artifacts:
+    paths:
+    - main.go
+
+script:
+- go test -v -cover -race
+
+notifications:
+  email:
+  - mail@rikvanderheijden.com
